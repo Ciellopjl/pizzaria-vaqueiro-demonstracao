@@ -1,0 +1,81 @@
+﻿  Ôû▓ Next.js 14.2.34
+  - Experiments (use with caution):
+    ┬À esmExternals
+
+   Creating an optimized production build ...
+node.exe : Failed to 
+compile.
+No linha:1 caractere:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Failed to com   
+ pile.:String) [],     
+RemoteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+
+./src/app/admin/(panel)
+/cardapio/page.tsx
+Module not found: 
+Can't resolve 
+'lucide-react'
+
+https://nextjs.org/docs
+/messages/module-not-fo
+und
+
+./src/app/admin/(panel)
+/dashboard/page.tsx
+Module not found: 
+Can't resolve 
+'lucide-react'
+
+https://nextjs.org/docs
+/messages/module-not-fo
+und
+
+./src/app/admin/(panel)
+/layout.tsx
+Module not found: 
+Can't resolve 
+'lucide-react'
+
+https://nextjs.org/docs
+/messages/module-not-fo
+und
+
+./src/app/admin/(panel)
+/pedidos/page.tsx
+Module not found: 
+Can't resolve 
+'lucide-react'
+
+https://nextjs.org/docs
+/messages/module-not-fo
+und
+
+./src/app/admin/(panel)
+/promocoes/page.tsx
+Module not found: 
+Can't resolve 
+'lucide-react'
+
+https://nextjs.org/docs
+/messages/module-not-fo
+und
+
+
+> Build failed because 
+of webpack errors
+
