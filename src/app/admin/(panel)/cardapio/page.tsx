@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Plus, Pencil, Trash2, X, Image as ImageIcon, Loader2 } from 'lucide-react';
-import { removeBackground } from '@imgly/background-removal';
+// import { removeBackground } from '@imgly/background-removal'; // Removed static import to avoid build errors
 import { categories } from '@/data/pizzas';
 import type { Pizza } from '@/data/pizzas';
 import { useAdminStore } from '@/store/adminStore';
@@ -291,8 +291,10 @@ export default function CardapioPage() {
                                                         try {
                                                             setIsProcessingImage(true);
 
-                                                            // AI Background Removal
+                                                            // AI Background Removal (Dynamically imported to avoid build-time WASM issues)
+                                                            const { removeBackground } = await import('@imgly/background-removal');
                                                             const blob = await removeBackground(file, {
+                                                                model: 'isnet', // explicitly set model
                                                                 progress: (item, progress) => {
                                                                     // console.log(`Processing ${item}: ${Math.round(progress * 100)}%`);
                                                                 }
