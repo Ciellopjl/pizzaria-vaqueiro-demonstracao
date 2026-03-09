@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-black: #0A0A0A;
+  --color-dark-gray: #1A1A1A;
+  --color-gold: #D4AF37;
+  --color-gold-hover: #E5C35C;
+  --color-white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E5C35C;
+}
+
+/* Gold text gradient */
+.gold-text {
+  background: linear-gradient(135deg, #D4AF37, #F0D060, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold border shimmer */
+.gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.gold-border:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Button primary gold */
+.btn-gold {
+  background: linear-gradient(135deg, #D4AF37, #E5C35C);
+  color: #0A0A0A;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #E5C35C, #F0D060);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+/* Card hover effect */
+.pizza-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pizza-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+}
+
+/* Section fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+/* Cart overlay */
+.cart-overlay {
+  backdrop-filter: blur(4px);
+  background: rgba(10, 10, 10, 0.7);
+}
+
+/* Category tab active */
+.category-tab-active {
+  background: linear-gradient(135deg, #D4AF37, #E5C35C);
+  color: #0A0A0A;
+}
+
+/* Gradient separator */
+.gold-separator {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
